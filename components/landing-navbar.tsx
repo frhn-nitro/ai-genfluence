@@ -23,24 +23,29 @@ export const LandingNavbar = () => {
         <div className="relative h-8 w-8 mr-4">
           <Image fill alt="Logo" className="object-cover" src="/favicon.png" />
         </div>
-        <h1 className={cn("text-2xl font-bold text-white", font.className)}>
+        <h1 className={cn("text-3xl font-bold text-white", font.className)}>
           Genfluence
         </h1>
       </Link>
       <div className="flex items-center gap-x-2">
         <Link href={isSignedIn ? "/dashboard" : "sign-up"}>
-          <Button variant="outline" className="rounded-full">
+          <Button variant="navbar" className="rounded-full mr-2 text-1xl">
             Model
           </Button>
         </Link>
         <Link href={isSignedIn ? "/dashboard" : "sign-up"}>
-          <Button variant="outline" className="rounded-full">
+          <Button variant="navbar" className="rounded-full mr-2 text-1xl">
             Create
           </Button>
         </Link>
         <Link href={isSignedIn ? "/dashboard" : "sign-up"}>
-          <Button variant="outline" className="rounded-full">
+          <Button variant="navbar" className="rounded-full mr-2 text-1xl">
             Pricing
+          </Button>
+        </Link>
+        <Link href={isSignedIn ? "/dashboard" : "sign-up"}>
+          <Button className="rounded-full text-1xl">
+            Login
           </Button>
         </Link>
       </div>

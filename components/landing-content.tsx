@@ -1,7 +1,10 @@
 "use clinet";
 
 import { Montserrat } from "next/font/google";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardImage } from "./ui/card";
+import Link from "next/link";
+
+import { Button } from "./ui/button";
 
 const font = Montserrat({
   weight: "600",
@@ -10,59 +13,60 @@ const font = Montserrat({
 
 const testimonials = [
   {
-    name: "Daniel L.",
-    avatar: "DL",
-    title: "Software Engineer",
+    image: "/img/v2_6.png",
+    title: "Captivating Characters",
     description:
-      "Genfluence blends simplicity with depth, enhancing my workflow substantially.",
+      "Use our cutting edge diffusion technology to create stunning characters.",
   },
   {
-    name: "Marc E.",
-    avatar: "ME",
-    title: "DJ & Event Manager",
-    description: "It has elevated my brand's presence. Truly a game-changer.",
+    image: "/img/v2_7.png",
+    title: "Breathtaking Quality",
+    description:
+      "Get started with easy to use templates and prompts to control your character's appearance.",
   },
   {
-    name: "Adrian S.",
-    avatar: "AS",
-    title: "Finance Manager",
+    image: "/img/v2_8.png",
+    title: "Unparalleled Accuracy",
     description:
-      "The app's insights have optimized our financial strategies, ensuring greater efficiency and more informed decision-making.",
-  },
-  {
-    name: "Dorothea R.",
-    avatar: "DR",
-    title: "Student",
-    description:
-      "I've been experimenting for days. While I don't own a brand, the AI capabilities are intriguing.",
+      "Create evocative poses and bring fans deeper into your character's world.",
   },
 ];
 
 export const LandingContent = () => {
   return (
     <div className="px-10 pb-20">
-      <h2 className="text-center text-4xl text-white font-extrabold mb-10">
-        Testimonials
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {testimonials.map((item) => (
           <Card
             key={item.description}
-            className="bg-[#192339] border-none text-white"
+            className="bg-[#192339] border-none text-white card w-full shadow-x1"
           >
-            <CardHeader>
-              <CardTitle className="flex items-center gap-x-2">
-                <div>
-                  <p className="text-lg">{item.name}</p>
-                  <p className="text-zinc-400 text-sm">{item.title}</p>
-                </div>
-              </CardTitle>
-              <CardContent className="pt-4 px-0">
+            <CardImage>
+              <img
+                src={item.image}
+                alt="Accuracy Image"
+                className="rounded-xl w-full h-auto"
+              />
+            </CardImage>
+            <CardTitle>
+              <div className="text-white text-3xl font-bold font-['Outfit'] capitalize leading-10 pl-8">
+                {item.title}
+              </div>
+            </CardTitle>
+            <CardContent>
+              <div className="w-full text-white text-base font-normal font-['Inter'] leading-relaxed p-3 m-0">
                 {item.description}
-              </CardContent>
-            </CardHeader>
+              </div>
+            </CardContent>
           </Card>
         ))}
+      </div>
+      <div className="text-white py-5 text-center space-y-5">
+        <Link href="/sign-up">
+          <Button className="md:text-lg p-4 md:p-6 rounded-full">
+            Try it Out!
+          </Button>
+        </Link>
       </div>
     </div>
   );

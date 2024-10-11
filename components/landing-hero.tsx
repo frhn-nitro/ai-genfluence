@@ -26,10 +26,7 @@ export const LandingHero = () => {
       </div>
       <div>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-          <Button
-            variant="premium"
-            className="md:text-lg p-4 md:p-6 rounded-full"
-          >
+          <Button className="md:text-lg p-4 md:p-6 rounded-full">
             Get Started
           </Button>
         </Link>

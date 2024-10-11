@@ -13,7 +13,8 @@ const testimonials = [
     name: "Daniel L.",
     avatar: "DL",
     title: "Software Engineer",
-    description: "Genfluence blends simplicity with depth, enhancing my workflow substantially.",
+    description:
+      "Genfluence blends simplicity with depth, enhancing my workflow substantially.",
   },
   {
     name: "Marc E.",
@@ -25,16 +26,17 @@ const testimonials = [
     name: "Adrian S.",
     avatar: "AS",
     title: "Finance Manager",
-    description: "The app's insights have optimized our financial strategies, ensuring greater efficiency and more informed decision-making.",
+    description:
+      "The app's insights have optimized our financial strategies, ensuring greater efficiency and more informed decision-making.",
   },
   {
     name: "Dorothea R.",
     avatar: "DR",
     title: "Student",
-    description: "I've been experimenting for days. While I don't own a brand, the AI capabilities are intriguing.",
+    description:
+      "I've been experimenting for days. While I don't own a brand, the AI capabilities are intriguing.",
   },
 ];
-
 
 export const LandingContent = () => {
   return (
@@ -48,7 +50,7 @@ export const LandingContent = () => {
             key={item.description}
             className="bg-[#192339] border-none text-white"
           >
-            {/* <CardHeader>
+            <CardHeader>
               <CardTitle className="flex items-center gap-x-2">
                 <div>
                   <p className="text-lg">{item.name}</p>
@@ -58,7 +60,7 @@ export const LandingContent = () => {
               <CardContent className="pt-4 px-0">
                 {item.description}
               </CardContent>
-            </CardHeader> */}
+            </CardHeader>
           </Card>
         ))}
       </div>

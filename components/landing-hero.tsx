@@ -16,29 +16,13 @@ export const LandingHero = () => {
   const { isSignedIn } = useAuth();
 
   return (
-    <div className="text-white font-bold py-36 text-center space-y-5">
+    <div className="text-white py-5 text-center space-y-5">
       <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-extrabold">
-        <h1>All In One AI Tool for</h1>
-        <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-700">
-          <TypewriterComponent
-            options={{
-              strings: [
-                "Chatbot.",
-                "Photo Generation.",
-                "Music Generation.",
-                "Code Generation.",
-                "Video Generation.",
-              ],
-              autoStart: true,
-              loop: true,
-              cursorClassName: "text-white animate-pulse duration-1000 text-5xl align-middle",
-              cursor: "|",
-            }}
-          />
-        </div>
-      </div>
-      <div className="text-sm md:text-xl font-light text-zinc-400">
-        Create content using AI 10x faster.
+        <h1>
+          <p>Bring Any Character To Life.</p>
+          <p className="mt-6 mb-6">Tell A Story.</p>
+          <p>Build A Fan Base!</p>
+        </h1>
       </div>
       <div>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
@@ -46,12 +30,18 @@ export const LandingHero = () => {
             variant="premium"
             className="md:text-lg p-4 md:p-6 rounded-full"
           >
-            Start Generating For Free
+            Get Started
           </Button>
         </Link>
       </div>
-      <div className="text-zinc-400 text-xs md:text-sm font-normal mb-0 pb-0">
-        No credit card requierd
+      <div>
+        <img
+          class="w-full h-auto"
+          src="/brand/hero.png"
+          alt="Hero Image"
+          data-xblocker="passed"
+          // style="visibility: visible;"
+        />
       </div>
     </div>
   );

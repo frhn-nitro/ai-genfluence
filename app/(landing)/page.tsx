@@ -5,8 +5,6 @@ import { LandingNavbarNewicon } from "@/components/landing-navbar-newicon";
 import { LandingFooter } from "@/components/landing-footer";
 import { Footer } from "@/components/footer";
 
-import "../../App.css";
-
 const LandingPage = () => {
   return (
     <div className="h-full">

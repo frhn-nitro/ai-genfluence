@@ -3,8 +3,8 @@
 export const Footer = () => {
   return (
     <div className="bg-richblack-800">
-      <div className="flex lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto relative py-14">
-        <div className="border-b w-[100%] flex flex-col lg:flex-row pb-5 border-richblack-700">
+      <div className="flex lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent leading-6 mx-auto relative py-14">
+        <footer className="pt-[10rem] px-[0.5rem] w-full footer flex md:flex-row">
           <nav className="grow ">
             <img className="max-w-[204px]" src="/brand/v2_brand.png" />
             <a
@@ -14,9 +14,9 @@ export const Footer = () => {
               hello@genfluence.ai
             </a>
           </nav>
-          <div className="flex gap-5 md:gap-40 ">
+          <div className="flex gap-5 md:gap-40  text-opacity-60 text-white">
             <nav className="grow flex flex-col items-start gap-4 flex-wrap">
-              <h6 className=" text-brand-color-light mb-3 text-base font-['outfit'] leading-[24px] font-bold ">
+              <h6 className=" text-brand-color-light mb-3 text-base text-white font-['outfit'] leading-[24px] font-bold ">
                 Support
               </h6>
               <a href="https://t.me/genfluenceai">Telegram&nbsp;community</a>
@@ -24,7 +24,7 @@ export const Footer = () => {
               <a href="/about/refund">Refund Policy</a>
             </nav>
             <nav className="grow flex flex-col items-start gap-4 flex-wrap">
-              <h6 className=" text-brand-color-light mb-3 text-base font-['outfit'] leading-[24px] font-bold ">
+              <h6 className=" text-brand-color-light mb-3 text-base text-white font-['outfit'] leading-[24px] font-bold ">
                 Legal
               </h6>
               <a href="/about/privacy">Privacy Policy</a>
@@ -32,8 +32,15 @@ export const Footer = () => {
               <a href="/about/content_moderation">Content Moderation</a>
             </nav>
           </div>
-        </div>
+        </footer>
       </div>
+      <footer className="footer px-10 py-4 ">
+        <aside className="flex justify-center items-center w-full">
+          <p className="text-xs text-slate-100 normal-case tracking-normal font-normal font-[inter] leading-[18px]">
+            Copyright © Genfluence AI 2024 | All rights reserved
+          </p>{" "}
+        </aside>
+      </footer>
     </div>
   );
 };

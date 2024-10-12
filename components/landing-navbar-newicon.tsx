@@ -27,7 +27,6 @@ export const LandingNavbarNewicon = () => {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
             viewBox="0 0 448 512"
             className="text-xs md:text-sm"
             height="1em"

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import { useAuth } from "@clerk/nextjs";
 import Link from "next/link";
@@ -33,11 +34,10 @@ export const LandingHero = () => {
       </div>
       <div>
         <img
-          class="w-full h-auto"
+          className="w-full h-auto"
           src="/brand/hero.png"
           alt="Hero Image"
           data-xblocker="passed"
-          // style="visibility: visible;"
         />
       </div>
     </div>

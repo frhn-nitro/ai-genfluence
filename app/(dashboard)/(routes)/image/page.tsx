@@ -48,7 +48,7 @@ const ImagePage = () => {
     try {
       setImages([]);
 
-      console.log(values, formSchema)
+      console.log(values, formSchema);
 
       const response = await axios.post("/api/image", {
         values,
@@ -62,7 +62,7 @@ const ImagePage = () => {
     } catch (error: any) {
       if (error?.response?.status === 403) {
         proModal.onOpen();
-      }else {
+      } else {
         toast.error("Something went wrong, please try again later...");
       }
     } finally {
@@ -155,9 +155,14 @@ const ImagePage = () => {
                   </FormItem>
                 )}
               />
-            <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
-              Generate
-            </Button>
+              <Button
+                className="col-span-12 lg:col-span-2 w-full"
+                type="submit"
+                disabled={isLoading}
+                size="icon"
+              >
+                Generate
+              </Button>
             </form>
           </Form>
         </div>
@@ -176,16 +181,16 @@ const ImagePage = () => {
                 <div className="relative aspect-square">
                   <Image alt="Image" fill className="object-cover" src={src} />
                 </div>
-                  <CardFooter className="p-2">
-                    <Button
-                      variant="secondary"
-                      className="w-full"
-                      onClick={() => window.open(src)}
-                    >
-                      <Download className="h-4 w-4 mr-2" />
-                        Download
-                    </Button>
-                  </CardFooter>
+                <CardFooter className="p-2">
+                  <Button
+                    variant="secondary"
+                    className="w-full"
+                    onClick={() => window.open(src)}
+                  >
+                    <Download className="h-4 w-4 mr-2" />
+                    Download
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>

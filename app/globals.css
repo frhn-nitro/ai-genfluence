@@ -10,7 +10,7 @@ body,
 
 .bg-dark {
   --tw-bg-opacity: 1;
-  background-color: rgb(14 13 13 / var(--tw-bg-opacity));
+  background-color: rgb(14 13 13);
 }
 
 @layer base {

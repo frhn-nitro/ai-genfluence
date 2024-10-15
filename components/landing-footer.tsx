@@ -13,7 +13,7 @@ export const LandingFooter = () => {
           className="rounded-full"
           style={{
             borderColor: `rgba(255, 255, 255, 0.1)`,
-            background: `radial-gradient(circle at 55% 40%, red -280%, rgb(14 13 13 / var(--tw-bg-opacity)) 56%)`,
+            background: `radial-gradient(circle at 55% 40%, red -280%, rgb(14 13 13) 56%)`,
           }}
         >
           <svg

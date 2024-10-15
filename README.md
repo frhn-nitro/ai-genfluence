@@ -11,7 +11,7 @@ It was created from the Tutorial from @CodeWithAntonio (AI SaaS Platform)
 Clone the project
 
 ```bash
-  git clone https://github.com/topDevfullstack/genfluence.ai-mecitio.git
+  git clone https://github.com/topDevfullstack/ai-genfluence.git
 ```
 
 Go to the project directory

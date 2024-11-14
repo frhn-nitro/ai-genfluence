@@ -17,19 +17,19 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd genfluence.ai-mecitio
+  cd ai-genfluence
 ```
 
 Install dependencies
 
 ```bash
-  pnpm install
+  npm install
 ```
 
 Start the project
 
 ```bash
-  pnpm run dev
+  npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
